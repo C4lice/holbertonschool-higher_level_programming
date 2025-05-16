@@ -7,14 +7,14 @@ def list_division(ma_liste_1, ma_liste_2, liste_longueur):
             a = ma_liste_1[i]
             b = ma_liste_2[i]
             res = a / b
-        except TypeError:
-            print("wrong type")
-            res = 0
         except ZeroDivisionError:
             print("division par 0")
             res = 0
         except IndexError:
             print("out of range")
+            res = 0
+        except TypeError:
+            print("wrong type")
             res = 0
         finally:
             resultats.append(res)
