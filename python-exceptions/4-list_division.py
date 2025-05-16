@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-def list_division(ma_liste_1, ma_liste_2, list_length):
+def list_division(my_list_1, my_list_2, list_length):
     resultats = []
 
     for i in range(list_length):
+        result = 0
         try:
-            a = ma_liste_1[i]
-            b = ma_liste_2[i]
-            res = a / b
+            result = my_list_1[i] / my_list_2[i]
         except ZeroDivisionError:
             print("division par 0")
             res = 0
