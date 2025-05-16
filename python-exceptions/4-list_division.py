@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-def list_division(ma_liste_1, ma_liste_2, liste_longueur):
+def list_division(ma_liste_1, ma_liste_2, list_length):
     resultats = []
 
-    for i in range(liste_longueur):
+    for i in range(list_length):
         try:
             a = ma_liste_1[i]
             b = ma_liste_2[i]
