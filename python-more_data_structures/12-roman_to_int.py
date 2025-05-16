@@ -17,9 +17,9 @@ def roman_to_int(roman_string):
         "M": 1000,
     }
 
-    res = conv[rom[0]]  # Commencer par la première valeur de la chaîne inversée
+    res = conv[rom[0]]  # Commence par la première valeur de la chaîne inversée
 
-    # Boucle sur la chaîne romaine inversée en commençant par le deuxième élément
+    # Boucle sur la chaîne romaine inversée commençant par le deuxième élément
     for i in range(1, len(rom)):
         # Si le chiffre actuel est inférieur au précédent, soustraire sa valeur
         if conv[rom[i]] < conv[rom[i - 1]]:
