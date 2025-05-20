@@ -2,8 +2,7 @@
 """
 module that create a square class
 """
-class Square:
-    pass
+class Square():
     """
     a class that represente square
     """
