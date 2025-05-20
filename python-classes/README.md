@@ -1,0 +1,1 @@
+tasks 1 a 6 du projets Python Classes and Objects.
