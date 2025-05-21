@@ -1,1 +1,12 @@
-tasks 1 a 6 du projets Python Classes and Objects.
+Projet: Python - Classes and Objects
+
+
+fichiers
+
+0-square.py
+1-square.py
+2-square.py
+3-square.py
+4-square.py
+5-square.py
+6-square.py
