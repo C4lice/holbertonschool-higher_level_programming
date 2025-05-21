@@ -6,3 +6,4 @@ class Square():
     """
     a class that represente square
     """
+    pass
