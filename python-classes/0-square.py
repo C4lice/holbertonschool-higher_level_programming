@@ -2,6 +2,8 @@
 """
 module that create a square class
 """
+
+
 class Square():
     """
     a class that represente square
