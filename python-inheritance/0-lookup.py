@@ -4,7 +4,6 @@ module that create a square class
 """
 
 
-
 def lookup(obj):
     """
     lookup defined with its object
