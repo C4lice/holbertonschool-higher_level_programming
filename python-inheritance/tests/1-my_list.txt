@@ -82,26 +82,4 @@ print(my_list)
 # void integer:
 =========================
 >>> my_list = MyList()
->>> print(my_list)
-[]
->>> my_list.append()
->>> print(my_list)
-[]
->>> my_list.append()
->>> print(my_list)
-[ , ]
->>> my_list.append()
->>> print(my_list)
-[ , , ]
->>> my_list.append()
->>> print(my_list)
-[ , , , ]
->>> my_list.append()
->>> print(my_list)
-[ , , , , ]
->>> print(my_list)
-[ , , , , ]
->>> my_list.print_sorted
-[, , , , ]
->>> print(my_list)
-[ , , , , ]
+>>> print_sorted(my_list)
