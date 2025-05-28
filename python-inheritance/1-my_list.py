@@ -3,6 +3,7 @@
 module that create a square class
 """
 
+
 class MyList(list):
     """
     create a class MyList
