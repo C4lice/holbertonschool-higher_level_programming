@@ -3,7 +3,6 @@
 '''
 This module provides a function that pickles instances of data to a file.
 '''
-
 import pickle
 
 
