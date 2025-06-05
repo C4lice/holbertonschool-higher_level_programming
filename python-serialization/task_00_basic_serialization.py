@@ -3,7 +3,6 @@
 '''
 This module provides a function that writes JSON to a file.
 '''
-
 import json
 
 
