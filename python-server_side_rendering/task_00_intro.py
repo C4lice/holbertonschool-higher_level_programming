@@ -1,34 +1,34 @@
-
 def generate_invitations(template, attendees):
-    # Check if template is a string
+    # Vérifie que template est une chaîne de caractères
     if not isinstance(template, str):
-        logging.error("Invalid template type. Expected a string.")
-        return
+        return "template must be a string"
+    
+    # Vérifie que attendees est une liste
+    if not isinstance(attendees, list):
+        return "attendees must be a list"
+    
+    # Vérifie si le template est vide
+    if template == "":
+        return "Template is empty, no output files generated."
+    
+    # Vérifie si la liste d'invités est vide
+    if attendees == []:
+        return "No data provided, no output files generated."
 
-    # Check if attendees is a list of dictionaries
-    if not isinstance(attendees, list) or not all(isinstance(a, dict) for a in attendees):
-        logging.error("Invalid attendees type. Expected a list of dictionaries.")
-        return
+    # Liste des clés attendues dans chaque dictionnaire
+    key_list = ["name", "event_title", "event_date", "event_location"]
 
-    # Check if template is empty
-    if not template.strip():
-        logging.error("Template is empty, no output files generated.")
-        return
+    # Boucle sur chaque invité
+    for i, element in enumerate(attendees):
+        result = template  # Copie du template à modifier
 
-    # Check if attendees list is empty
-    if not attendees:
-        logging.error("No data provided, no output files generated.")
-        return
+        # Remplace chaque placeholder par sa valeur ou "N/A" si manquant
+        for key in key_list:
+            value = element.get(key)
+            if value is None:
+                value = "N/A"
+            result = result.replace("{" + "{}".format(key) + "}", value)
 
-    # Process each attendee
-    for i, attendee in enumerate(attendees, start=1):
-        # Replace placeholders with attendee data or 'N/A' if missing
-        filled_template = template
-        for key in ["name", "event_title", "event_date", "event_location"]:
-            value = attendee.get(key, "N/A")
-            filled_template = filled_template.replace(f"{{{{{key}}}}}", value)
-
-        # Write to output_X.txt
-        file_name = f"output_{i}.txt"
-        with open(file_name, "w", encoding="utf-8") as file:
-            file.write(filled_template)
+        # Crée un fichier output_X.txt avec le contenu personnalisé
+        with open("output_{}.txt".format(i + 1), 'w', encoding='UTF-8') as fichier:
+            fichier.write(result)
