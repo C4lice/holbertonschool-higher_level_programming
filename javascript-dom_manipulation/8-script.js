@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const docs = document.getElementById('hello');
 
   // Appelle l'API pour dire bonjour en français
-  fetch('https://hellosalut.stefanbohacek.dev/?lang=fr')
+  fetch('https://hellosalut.stefanbohacek.com/?lang=fr')
     .then(res => res.json()) // Lis la réponse
     .then(data => {
       docs.textContent = data.hello; // Affiche le bonjour
